@@ -8,7 +8,7 @@
 
 # -----------------------------------------
 
-# Introduction
+# Introduction-----
 
 "Hello World"
 
@@ -20,15 +20,9 @@
 
 ## Compilation du code
 
-### Exemple
-
 "Hello World!"
 
-# la `print()`fonction 
-
-
-
-### Exemple
+# la `print()`fonction--- 
 
 print("My first code !")
 
@@ -37,8 +31,9 @@ print("My first code !")
 
 for (x in 1:10) {
   print(x)
+}
 
-### Les commentaires
+## Les commentaires-------
 
 # Ceci est un comment
   
@@ -47,20 +42,12 @@ for (x in 1:10) {
 
 # Cet exemple utilise un commentaire à la fin d'une ligne de code :
 
+
 "Hello World!" # Ceci est un comment
 
 
-# Les commentaires peuvent aussi être utiliser pour pour empêcher R d'exécuter le code :
-  
-# "Good morning!"
 
-# pas de synthaxe pour les commentaire multiple
-
-# This is a comment
-# written in
-# more than just one line
-
-# Variables R
+# Variables ----------------------
 
 # Les variables sont des conteneurs permettant de stocker des valeurs de données.
 
@@ -74,16 +61,13 @@ age    # output 40
 
 name <- "John Doe"
 
-name # auto-print the value of the name variable
-
-
 # print() fonction disponible pour affichez une fonction
 
 name <- "John Doe"
 
 print(name) 
 
-# Assign the same value to multiple variables in one line
+# Assigner une même valeur à plusieur variable
 
 var1 <- var2 <- var3 <- "Orange"
 
@@ -93,16 +77,7 @@ var1
 var2
 var3
 
-# moments où vous devez utiliser la print() fonction pour générer du code
-  
-### Exemple
-  
-for (x in 1:10) {
-  print(x)
-}
-
-
-### Concaténer des éléments
+### Concaténer des variables
 
 text <- "awesome"
 
@@ -114,7 +89,7 @@ text2 <- "awesome"
 paste(text1, text2)
 
 
-#Pour les nombres, le +caractère fonctionne comme un opérateur mathématique :
+#Pour les nombres :
 
 num1 <- 5
 num2 <- 10
@@ -131,7 +106,7 @@ text <- "Some text"
 
 # N'oubliez pas que les noms de variables sont sensibles à la casse !
   
-# Legal variable names:
+# Affectation correcte:
 
 myvar <- "John"
 my_var <- "John"
@@ -140,7 +115,7 @@ MYVAR <- "John"
 myvar2 <- "John"
 .myvar <- "John"
 
-# Illegal variable names:
+# Affectation incorrecte:
 
 #2myvar <- "John"
 #my-var <- "John"
@@ -149,230 +124,89 @@ myvar2 <- "John"
 #my_v@ar <- "John"
 #TRUE <- "John"
 
-## Types de données
-
-my_var <- 30 # my_var is type of numeric
-my_var <- "Sally" # my_var is now of type character (aka string)
+## Types de données -------------------------------
 
 
-# numeric
+# numeric-----
 
 x <- 10.5
 class(x)
 
-# integer
+# integer----
 
 x <- 1000L
 class(x)
 
-# complex
+# complex----
 
 x <- 9i + 3
 class(x)
 
-# character/string
+# string----
 
 x <- "R is exciting"
 class(x)
 
-# logical/boolean
 
-x <- TRUE
-class(x)
+#Les chaînes sont utilisées pour stocker du texte.
 
-### Nombres
-
-# Il existe trois types de nombres dans R :
-
-x <- 10.5   # numeric
-y <- 10L    # integer
-z <- 1i     # complex
-
-### Opérateur arithemétique
-
-
-# L' (+) opérateur permet d'additionner deux valeurs :
-
-
-10 + 5
-
-10 - 5
-
-R possède également de nombreuses fonctions mathématiques intégrées qui vous permettent d'effectuer des tâches mathématiques sur des nombres.
-
-Par exemple, les fonctions min()et max()peuvent être utilisées pour trouver le nombre le plus petit ou le plus élevé dans un ensemble :
-  
-  La sqrt()fonction renvoie la racine carrée d'un nombre :
-
-La abs()fonction renvoie la valeur absolue (positive) d'un nombre :
-  
-  ```{r}
-max(5, 10, 15)
-
-min(5, 10, 15)
-
-sqrt(16)
-abs(-4.7)
-```
-
-### Cordes R
-
-Les chaînes sont utilisées pour stocker du texte.
-
-Une chaîne est entourée soit de guillemets simples, soit de guillemets doubles :
-  
-  "hello"est le même que 'hello':
-  
-  ```{r}
 "hello"
 'hello'
 
-str <- "Hello"
-str # print the value of str
 
-str <- "Lorem ipsum dolor sit amet,
-consectetur adipiscing elit,
-sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua."
+# Il existe de nombreuses fonctions de chaîne utiles dans R.
 
-cat(str)
-
-str # print the value of str
-```
-
-Longueur de chaine Il existe de nombreuses fonctions de chaîne utiles dans R.
-
-Par exemple, pour connaître le nombre de caractères dans une chaîne, utilisez la nchar()fonction :
-  
-  ```{r}
 str <- "Hello World!"
-
 nchar(str)
-```
 
-Vérifier une chaîne Utilisez la grepl()fonction pour vérifier si un caractère ou une séquence de caractères est présent dans une chaîne :
-  
-  ```{r}
+#vérifier si un caractère ou une séquence de caractères est présent dans une chaîne 
+
 str <- "Hello World!"
 
 grepl("H", str)
 grepl("Hello", str)
 grepl("X", str)
 
-```
+# Combiner deux chaînes
 
--   Combiner deux chaînes Utilisez la paste()fonction pour fusionner/concaténer deux chaînes :
-  
-  ```{r}
 str1 <- "Hello"
 str2 <- "World"
 
 paste(str1, str2)
-```
 
-### Valeurs logiques
 
-Booléens (valeurs logiques) En programmation, il faut souvent savoir si une expression est vraie ou fausse .
+## logiques/boolean ----
 
-Vous pouvez évaluer n’importe quelle expression dans R et obtenir l’une des deux réponses, TRUEou FALSE.
+x <- TRUE
+class(x)
 
-Lorsque vous comparez deux valeurs, l'expression est évaluée et R renvoie la réponse logique :
 
-```{r}
-10 > 9    # TRUE because 10 is greater than 9
-10 == 9   # FALSE because 10 is not equal to 9
-10 < 9    # FALSE because 10 is greater than 9
-```
+### Opérateurs de comparaison ------------------
 
-vous pouvez également comparer deux variables :
-
-```{r}
-
-a <- 10
-b <- 9
-
-a > b
-
-```
-
-Vous pouvez également exécuter une condition dans une ifinstruction, sur laquelle vous en apprendrez beaucoup plus dans le chapitre if..else .
-
-```{r}
-a <- 200
-b <- 33
-
-if (b > a) {
-  print ("b is greater than a")
-} else {
-  print("b is not greater than a")
-}
-
-```
-
-## Opérateurs arithmétiques R
-
-Operator Name Example Try it + Addition x + y\
-- Subtraction x - y\
-\* Multiplication x \* y\
-/ Division x / y\
-\^ Exponent x \^ y\
-%% Modulus (Remainder from division) x %% y\
-%/% Integer Division x%/%y
-
-```{r}
-my_var <- 3
-
-my_var <<- 3
-
-3 -> my_var
-
-3 ->> my_var
-
-my_var # print my_var
-
-```
-
-### Opérateurs de comparaison R
-
-Operator Name Example == Equal x == y\
-!= Not equal x != y\
-\> Greater than x \> y\
-\< Less than x \< y\
-\>= Greater than or equal to x \>= y\
-\<= Less than or equal to x \<= y
+ x == y
+x != y 
+ x > y
+ x <
+x>= y
+x <= y
 
 ### Opérateurs logiques R
 
-& Element-wise Logical AND operator. It returns TRUE if both elements are TRUE && Logical AND operator - Returns TRUE if both statements are TRUE \| Elementwise- Logical OR operator. It returns TRUE if one of the statement is TRUE \|\| Logical OR operator. It returns TRUE if one of the statement is TRUE. ! Logical NOT - returns FALSE if statement is TRUE
 
-### R Opérateurs divers
+## Les Condition if ...Else --------------------
 
-: Creates a series of numbers in a sequence x \<- 1:10 %in% Find out if an element belongs to a vector x %in% y %*% Matrix Multiplication x \<- Matrix1 %*% Matrix2
-
-## Les Condition if ...Else
-
-R prend en charge les conditions logiques habituelles des mathématiques :
 
 ### L'instruction if
 
-Une "instruction if" est écrite avec le `if`mot-clé, et elle est utilisée pour spécifier un bloc de code à exécuter si une condition est `TRUE`:
-  
-  ```{r}
 a <- 33
 b <- 200
 
 if (b > a) {
   print("b is greater than a")
 }
-```
 
-R utilise des accolades { } pour définir la portée dans le code.
+### L'instruction else if --------
 
-### L'instruction else if
-
-Le `else if`mot-clé est la façon dont R dit « si les conditions précédentes n'étaient pas vraies, alors essayez cette condition » :
-
-```{r}
 a <- 33
 b <- 33
 
@@ -381,13 +215,7 @@ if (b > a) {
 } else if (a == b) {
   print ("a and b are equal")
 }
-```
 
-### l'instruction else
-  
-  Le `else`mot-clé intercepte tout ce qui n'est pas détecté par les conditions précédentes :
-
-```{r}
 a <- 200
 b <- 33
 
@@ -399,9 +227,6 @@ if (b > a) {
   print("a is greater than b")
 }
 
-```
-
-```{r}
 a <- 200
 b <- 33
 
@@ -410,45 +235,36 @@ if (b > a) {
 } else {
   print("b is not greater than a")
 }
-```
 
--   Instruction imbriqué
+# Instruction imbriqué
 
-    Vous pouvez également avoir `if`des instructions à l'intérieur `if`d'instructions, c'est ce qu'on appelle des instructions *imbriquées* `if`
+  
+x <- 41
 
-    ```{r}
-    x <- 41
-
-    if (x > 10) {
-      print("Above ten")
-      if (x > 20) {
-        print("and also above 20!")
+if (x > 10) {
+  print("Above ten")
+  if (x > 20) {
+    print("and also above 20!")
       } else {
         print("but not above 20.")
       }
     } else {
       print("below 10.")
     }
-    ```
+    
 
--   les Opérateur & et ou
+# les Opérateur & et ou
 
-    Le symbole & (et) est un opérateur logique et est utilisé pour combiner des instructions conditionnelles :
+a <- 200
+b <- 33
+c <- 500
 
-    ```{r}
-    a <- 200
-    b <- 33
-    c <- 500
+if (a > b & c > a) {
+  print("Both conditions are true")
+  }
 
-    if (a > b & c > a) {
-      print("Both conditions are true")
-    }
+# Le `|`symbole 
 
-    ```
-
-Le `|`symbole (ou) est un opérateur logique et est utilisé pour combiner des instructions conditionnelles :
-
-```{r}
 a <- 200
 b <- 33
 c <- 500
@@ -456,41 +272,22 @@ c <- 500
 if (a > b | a > c) {
   print("At least one of the conditions is true")
 }
-```
 
-### Les Boucles
 
-Les boucles peuvent exécuter un bloc de code tant qu'une condition spécifiée est atteinte.
+### Les Boucles --------------------
 
-Les boucles sont pratiques car elles permettent de gagner du temps, de réduire les erreurs et de rendre le code plus lisible.
 
-R a deux commandes de boucle :
-  
-  -   `while`boucles
 
--   `for`boucles
+### Boucle while
 
--   While boucle
-
-Avec la `while`boucle, nous pouvons exécuter un ensemble d'instructions tant qu'une condition est VRAIE :
-  
-  ```{r}
 i <- 1
 while (i < 6) {
   print(i)
   i <- i + 1
 }
-```
 
-Dans l'exemple ci-dessus, la boucle continuera à produire des nombres allant de 1 à 5. La boucle s'arrêtera à 6 car `6 < 6`est FALSE.
+### Boucle while avec instruction "break"
 
-La `while`boucle nécessite que les variables pertinentes soient prêtes, dans cet exemple, nous devons définir une variable d'indexation, `i`que nous définissons sur 1.
-
--   Break
-
-    Avec l' `break`instruction, nous pouvons arrêter la boucle même si la condition while est VRAIE :
-  
-  ```{r}
 i <- 1
 while (i < 6) {
   print(i)
@@ -499,15 +296,8 @@ while (i < 6) {
     break
   }
 }
-```
 
-La boucle s'arrêtera à 3 car nous avons choisi de terminer la boucle en utilisant l' `break`instruction quand `i`est égal à 4 ( `i == 4`).
-
--   Next
-
-Avec l' `next`instruction, nous pouvons sauter une itération sans terminer la boucle :
-
-```{r}
+### Boucle while avec instruction "next"
 i <- 0
 while (i < 6) {
   i <- i + 1
@@ -516,35 +306,29 @@ while (i < 6) {
   }
   print(i)
 }
-```
 
--   la boucle For
+# la boucle For-------
 
-    Une `for`boucle est utilisée pour parcourir une séquence :
-
-    ```{r}
+  
     for (x in 1:10) {
       print(x)
     }
-    ```
+    
 
-```{r}
 fruits <- list("apple", "banana", "cherry")
 
 for (x in fruits) {
   print(x)
 }
-```
 
-```{r}
+
 dice <- c(1, 2, 3, 4, 5, 6)
 
 for (x in dice) {
   print(x)
 }
-```
 
-```{r}
+
 fruits <- list("apple", "banana", "cherry")
 
 for (x in fruits) {
@@ -553,50 +337,32 @@ for (x in fruits) {
   }
   print(x)
 }
-```
 
-```         
-```
 
-```{r}
 
-```
+#### Les fonctions ---------------------------------
 
-#### Les fonctions
+# Une fonction est un bloc de code qui ne s'exécute que lorsqu'elle est appelée.
 
-Une fonction est un bloc de code qui ne s'exécute que lorsqu'elle est appelée.
 
-Vous pouvez transmettre des données, appelées paramètres, dans une fonction.
-
-En conséquence, une fonction peut renvoyer des données.
-
--   Exemple
-
-    ```{r}
-    my_function <- function() { # create a function with the name my_function
-      print("Hello World!")
+#
+my_function <- function() { 
+    print("Hello World!")
     }
-    ```
+    
+# Pour appeler une fonction, utilisez le nom de la fonction suivi de parenthèses
 
-Pour appeler une fonction, utilisez le nom de la fonction suivi de parenthèses, comme **my_function()** :
-
-```{r}
 my_function <- function() {
   print("Hello World!")
 }
 
-my_function() # call the function named my_function
-```
+my_function() 
 
 ## Arguments
 
-Les informations peuvent être transmises aux fonctions sous forme d'arguments.
+# Les informations peuvent être transmises aux fonctions sous forme d'arguments.
 
-Les arguments sont spécifiés après le nom de la fonction, entre parenthèses. Vous pouvez ajouter autant d’arguments que vous le souhaitez, il suffit de les séparer par une virgule.
 
-L'exemple suivant a une fonction avec un argument (fname). Lorsque la fonction est appelée, nous transmettons un prénom, qui est utilisé à l'intérieur de la fonction pour imprimer le nom complet :
-  
-  ```{r}
 my_function <- function(fname) {
   paste(fname, "Griffin")
 }
@@ -604,44 +370,36 @@ my_function <- function(fname) {
 my_function("Peter")
 my_function("Lois")
 my_function("Stewie")
-```
+
 
 ## Nombre d'arguments
 
-Par défaut, une fonction doit être appelée avec le bon nombre d'arguments. Cela signifie que si votre fonction attend 2 arguments, vous devez appeler la fonction avec 2 arguments, ni plus, ni moins :
+# Par défaut, une fonction doit être appelée avec le bon nombre d'arguments.
 
-Cette fonction attend 2 arguments et obtient 2 arguments :
+# Cette fonction attend 2 arguments et obtient 2 arguments :
 
-```{r}
+
 my_function <- function(fname, lname) {
   paste(fname, lname)
 }
 
 my_function("Peter", "Griffin")
-```
+
 
 ## Valeur du paramètre par défaut
 
-L'exemple suivant montre comment utiliser une valeur de paramètre par défaut.
-
-Si nous appelons la fonction sans argument, elle utilise la valeur par défaut :
-  
-  ```{r}
 my_function <- function(country = "Norway") {
   paste("I am from", country)
 }
 
 my_function("Sweden")
 my_function("India")
-my_function() # will get the default value, which is Norway
+my_function() 
 my_function("USA")
-```
 
-## Valeurs de retour
-
-Pour laisser une fonction renvoyer un résultat, utilisez la `return()`fonction :
+#Pour laisser une fonction renvoyer un résultat, utilisez la `return()`fonction :
   
-  ```{r}
+
 my_function <- function(x) {
   return (5 * x)
 }
@@ -649,194 +407,71 @@ my_function <- function(x) {
 print(my_function(3))
 print(my_function(5))
 print(my_function(9))
-```
+
 
 ## Fonctions imbriquées
 
-Il existe deux manières de créer une fonction imbriquée :
-  
-  -   Appeler une fonction dans une autre fonction.
-
--   Écrivez une fonction dans une fonction.
-
-```{r}
 Nested_function <- function(x, y) {
   a <- x + y
   return(a)
 }
 
-Nested_function(Nested_function(2,2), Nested_function(3,3))
-```
 
-#### Exemple expliqué
-
-La fonction dit à x d'ajouter y.
-
-La première entrée Nested_function(2,2) est "x" de la fonction principale.
-
-La deuxième entrée Nested_function(3,3) est "y" de la fonction principale.
-
-La sortie est donc (2+2) + (3+3) = **10** .
-
-Outer_func \<- function(x) {\
-  Inner_func \<- function(y) {\
-    a \<- x + y\
-    return(a)\
-  }\
-  return (Inner_func)\
-}\
-output \<- Outer_func(3) # To call the Outer_funcoutput(5)
-
-## Récursivité
-
-R accepte également la récursivité des fonctions, ce qui signifie qu'une fonction définie peut s'appeler elle-même.
-
-La récursivité est un concept mathématique et de programmation courant. Cela signifie qu'une fonction s'appelle elle-même. Cela a l’avantage de signifier que vous pouvez parcourir les données pour atteindre un résultat.
-
-Le développeur doit être très prudent avec la récursion car il peut être assez facile d'écrire une fonction qui ne se termine jamais, ou qui utilise des quantités excessives de mémoire ou de puissance du processeur. Cependant, lorsqu’elle est écrite correctement, la récursivité peut constituer une approche de programmation très efficace et mathématiquement élégante.
-
-Dans cet exemple, `tri_recursion()`est une fonction que nous avons définie pour s'appeler ("récurse"). Nous utilisons la `k`variable comme donnée, qui décrémente ( `-1`) à chaque fois que nous récurons. La récursion se termine lorsque la condition n'est pas supérieure à 0 (c'est-à-dire lorsqu'elle est 0).
-
-Pour un nouveau développeur, comprendre exactement comment cela fonctionne peut prendre un certain temps. La meilleure façon de le savoir est de le tester et de le modifier.
-
-```{r}
-tri_recursion <- function(k) {
-  if (k > 0) {
-    result <- k + tri_recursion(k - 1)
-    print(result)
-  } else {
-    result = 0
-    return(result)
-  }
-}
-tri_recursion(6)
-```
 
 ## Variables globales
 
-Les variables créées en dehors d'une fonction sont appelées variables **globales** .
+#Les variables créées en dehors d'une fonction sont appelées variables **globales** .
 
-Les variables globales peuvent être utilisées par tout le monde, aussi bien à l’intérieur qu’à l’extérieur des fonctions.
+# Les variables globales peuvent être utilisées par tout le monde, aussi bien à l’intérieur qu’à l’extérieur des fonctions.
 
-```{r}
 txt <- "awesome"
 my_function <- function() {
   paste("R is", txt)
 }
 
 my_function()
-```
 
-Si vous créez une variable du même nom dans une fonction, cette variable sera locale et ne pourra être utilisée qu'à l'intérieur de la fonction. La variable globale du même nom restera telle qu'elle était, globale et avec la valeur d'origine.
-
-```{r}
-txt <- "global variable"
-my_function <- function() {
-  txt = "fantastic"
-  paste("R is", txt)
-}
-
-my_function()
-
-txt # print txt
-```
-
-## L'opérateur d'affectation globale
-
-Normalement, lorsque vous créez une variable dans une fonction, cette variable est locale et ne peut être utilisée que dans cette fonction.
-
-Pour créer une variable globale dans une fonction, vous pouvez utiliser l' opérateur **d'affectation globale**`<<-`
-
-Si vous utilisez l'opérateur d'affectation `<<-`, la variable appartient à la portée globale :
-
-```{r}
-my_function <- function() {
-txt <<- "fantastic"
-  paste("R is", txt)
-}
-
-my_function()
-
-print(txt)
-```
-
-Utilisez également l' opérateur d'affectation **globale** si vous souhaitez modifier une variable globale dans une fonction :
-
-Exemple :
-
-Pour modifier la valeur d'une variable globale à l'intérieur d'une fonction, référez-vous à la variable en utilisant l'opérateur d'affectation global\<\<- :
-  
-  ```{r}
-txt <- "awesome"
-my_function <- function() {
-  txt <<- "fantastic"
-  paste("R is", txt)
-}
-
-my_function()
-
-paste("R is", txt)
-```
 
 ## Structures de données R
 
 ## Vecteurs
 
-Un vecteur est simplement une liste d’éléments du même type.
+# Vecteur  chaine de caractére 
 
-Pour combiner la liste d'éléments en un vecteur, utilisez la `c()`fonction et séparez les éléments par une virgule.
-
-Dans l'exemple ci-dessous, nous créons une variable vectorielle appelée **fruits** , qui combine des chaînes :
-  
-  ```{r}
-# Vector of strings
 fruits <- c("banana", "apple", "orange")
 
 # Print fruits
 fruits
-```
 
-Dans cet exemple, nous créons un vecteur qui combine des valeurs numériques :
-  
-  ```{r}
-# Vector of numerical values
+
+# Vecteur numérique
+
 numbers <- c(1, 2, 3)
 
-# Print numbers
 numbers
-```
 
-Pour créer un vecteur avec des valeurs numériques dans une séquence, utilisez l' `:`opérateur :
-
-```{r}
 # Vector with numerical values in a sequence
+
 numbers <- 1:10
 
 numbers
-```
 
-```{r}
-# Vector of logical values
+# Vecteur logique
+
 log_values <- c(TRUE, FALSE, TRUE, FALSE)
 
 log_values
-```
+
 
 ## Longueur du vecteur
 
-Pour connaître le nombre d'éléments d'un vecteur, utilisez la `len`
 
-```{r}
 fruits <- c("banana", "apple", "orange")
 
 length(fruits)
-```
 
 ## Trier un vecteur
 
-Pour trier les éléments d'un vecteur par ordre alphabétique ou numérique, utilisez la `sort()`fonction :
-  
-  ```{r}
 fruits <- c("banana", "apple", "orange", "mango", "lemon")
 numbers <- c(13, 3, 5, 7, 20, 2)
 
@@ -846,410 +481,236 @@ sort(numbers) # Sort numbers
 
 ## Accéder aux vecteurs
 
-Vous pouvez accéder aux éléments vectoriels en vous référant à leur numéro d'index entre parenthèses `[]`. Le premier élément a l'index 1, le deuxième élément a l'index 2, et ainsi de suite :
-
-```{r}
 fruits <- c("banana", "apple", "orange")
 
-# Access the first item (banana)
 fruits[1]
-```
 
-Vous pouvez également accéder à plusieurs éléments en vous référant à différentes positions d'index avec la `c()`fonction :
-  
-  ```{r}
 fruits <- c("banana", "apple", "orange", "mango", "lemon")
 
 # Access the first and third item (banana and orange)
+
 fruits[c(1, 3)]
-```
 
-Vous pouvez également utiliser des numéros d'index négatifs pour accéder à tous les éléments sauf ceux spécifiés :
-
-```{r}
 fruits <- c("banana", "apple", "orange", "mango", "lemon")
 
 # Access all items except for the first item
+
 fruits[c(-1)]
-```
 
 ## Modifier un élément
 
-Pour modifier la valeur d'un élément spécifique, reportez-vous au numéro d'index :
-
-```{r}
 fruits <- c("banana", "apple", "orange", "mango", "lemon")
 
 # Change "banana" to "pear"
+
 fruits[1] <- "pear"
 
 # Print fruits
 fruits
-```
+
 
 ## Répéter les vecteurs
 
-Pour répéter des vecteurs, utilisez la `rep()`fonction :
-
-```{r}
 repeat_each <- rep(c(1,2,3), each = 3)
 
 repeat_each
-```
 
-Répétez la séquence du vecteur :
 
-```{r}
+# Répétez la séquence du vecteur :
+
 repeat_times <- rep(c(1,2,3), times = 3)
 
 repeat_times
-```
 
 ## Génération de vecteurs séquencés
 
-L'un des exemples ci-dessus vous a montré comment créer un vecteur avec des valeurs numériques dans une séquence avec l' `:`opérateur 
-
-```{r}
 numbers <- 1:10
 
 numbers
-```
 
-Pour faire des pas plus ou moins grands dans une séquence, utilisez la `seq()`fonction :
+# Pour faire des pas plus ou moins grands dans une séquence, utilisez la `seq()`fonction :
 
-```{r}
 numbers <- seq(from = 0, to = 100, by = 20)
 
 numbers
-```
 
-```{r}
 
-```
+## Listes---
 
-**Remarque :** La `seq()`fonction a trois paramètres : `from`est l'endroit où la séquence commence, `to`est l'endroit où la séquence s'arrête et `by`est l'intervalle de la séquence.
 
-## Listes
-
-Une liste dans R peut contenir de nombreux types de données différents. Une liste est une collection de données ordonnées et modifiables.
-
-Pour créer une liste, utilisez la `list()`fonction :
-
-```{r}
 # List of strings
+
 thislist <- list("apple", "banana", "cherry")
 
 # Print the list
+
 thislist
-```
+
 
 ## Accéder aux listes
 
-Vous pouvez accéder aux éléments de la liste en vous référant à son numéro d'index, entre parenthèses. Le premier élément a l'index 1, le deuxième élément a l'index 2, et ainsi de suite :
-  
-  ```{r}
+
 thislist <- list("apple", "banana", "cherry")
 
 thislist[1]
-```
+
 
 ## Modifier la valeur de l'article
 
-Pour modifier la valeur d'un élément spécifique, reportez-vous au numéro d'index :
-  
-  ```{r}
+
 thislist <- list("apple", "banana", "cherry")
 thislist[1] <- "blackcurrant"
 
-# Print the updated list
 thislist
-```
 
 ## Longueur de la liste
 
-Pour connaître le nombre d'éléments d'une liste, utilisez la `length()`fonction :
-  
-  ### Exemple
-  
-  ```{r}
 thislist <- list("apple", "banana", "cherry")
 
 length(thislist)
-```
+
 
 ## Vérifier si l'élément existe
 
-Pour savoir si un élément spécifié est présent dans une liste, utilisez l' `%in%`opérateur :
-
-### Exemple
-
-Vérifiez si « pomme » est présent dans la liste :
-
-```{r}
 thislist <- list("apple", "banana", "cherry")
 
 "apple" %in% thislist
-```
 
 ## Ajouter des éléments de liste
 
-Pour ajouter un élément à la fin de la liste, utilisez la `append()`fonction :
+# Ajoutez « orange » à la liste :
 
-### Exemple
 
-Ajoutez « orange » à la liste :
-
-```{r}
 thislist <- list("apple", "banana", "cherry")
 
 append(thislist, "orange")
-```
 
-Pour ajouter un élément à droite d'un index spécifié, ajoutez " " dans la fonction :`after=index numberappend()`
 
-### Exemple
-
-Ajouter "orange" à la liste après "banane" (index 2) :
+#Ajouter "orange" à la liste après "banane" (index 2) :
   
-  ```{r}
 thislist <- list("apple", "banana", "cherry")
 
 append(thislist, "orange", after = 2)
-```
 
-## Supprimer des éléments de liste
+#Supprimez « pomme » de la liste 
 
-Vous pouvez également supprimer des éléments de liste. L'exemple suivant crée une nouvelle liste mise à jour sans élément « pomme » :
-
-### Exemple
-
-Supprimez « pomme » de la liste 
-
-```{r}
 thislist <- list("apple", "banana", "cherry")
 
 newlist <- thislist[-1]
 
 # Print the new list
+
 newlist
-```
 
 ## Gamme d'index
 
-Vous pouvez spécifier une plage d'index en spécifiant où commencer et où terminer la plage, à l'aide de l' `:` opérateur :
-
-```{r}
 thislist <- list("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 
 (thislist)[2:5]
-```
 
 ## Parcourez une liste
 
-Vous pouvez parcourir les éléments de la liste en utilisant une `for`boucle :
+# Imprimez tous les éléments de la liste, un par un :
 
-### Exemple
-
-Imprimez tous les éléments de la liste, un par un :
-
-```{r}
 thislist <- list("apple", "banana", "cherry")
 
 for (x in thislist) {
   print(x)
 }
-```
 
 ## Rejoignez deux listes
 
-Il existe plusieurs façons de joindre ou de concaténer deux ou plusieurs listes dans R.
 
-La méthode la plus courante consiste à utiliser la `c()`fonction, qui combine deux éléments :
-
-```{r}
 list1 <- list("a", "b", "c")
 list2 <- list(1,2,3)
 list3 <- c(list1,list2)
 
 list3
-```
 
-# Matrices R
 
-Une matrice est un ensemble de données bidimensionnelles comportant des colonnes et des lignes.
+# Matrices -----
 
-Une colonne est une représentation verticale des données, tandis qu'une ligne est une représentation horizontale des données.
-
-Une matrice peut être créée avec la `matrix()`fonction. Spécifiez les paramètres `nrow`et `ncol`pour obtenir le nombre de lignes et de colonnes :
-  
-  ### Exemple
-  
-  ```{r}
 # Create a matrix
+
 thismatrix <- matrix(c(1,2,3,4,5,6), nrow = 3, ncol = 2)
 
 # Print the matrix
-thismatrix
-```
 
-Vous pouvez également créer une matrice avec des chaînes :
-  
-  ### Exemple
-  
-  ```{r}
+thismatrix
+
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 thismatrix
-```
 
 ## Accéder aux éléments de la matrice
 
-Vous pouvez accéder aux éléments en utilisant `[ ]` des crochets. Le premier chiffre "1" entre parenthèses spécifie la position de la ligne, tandis que le deuxième chiffre "2" spécifie la position de la colonne :
-  
-  ### Exemple
-  
-  ```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 thismatrix[1, 2]
-```
 
-La ligne entière est accessible si vous spécifiez une virgule **après** le nombre entre parenthèses :
-  
-  ```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 thismatrix[2,]
-```
 
-La colonne entière est accessible si vous spécifiez une virgule **avant** le nombre entre parenthèses :
-  
-  ### Exemple
-  
-  ```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 thismatrix[,2]
-```
 
 ## Accéder à plusieurs lignes
 
-Plus d'une ligne est accessible si vous utilisez la `c()`fonction :
-
-### Exemple
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange","grape", "pineapple", "pear", "melon", "fig"), nrow = 3, ncol = 3)
 
 thismatrix[c(1,2),]
-```
 
-## Accéder à plus d'une colonne
-
-Plus d'une colonne est accessible si vous utilisez la `c()`fonction :
-
-### Exemple
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange","grape", "pineapple", "pear", "melon", "fig"), nrow = 3, ncol = 3)
 
 thismatrix[, c(1,2)]
-```
 
 ## Ajouter des lignes et des colonnes
 
-Utilisez la `cbind()`fonction pour ajouter des colonnes supplémentaires dans une matrice :
-
-### Exemple
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange","grape", "pineapple", "pear", "melon", "fig"), nrow = 3, ncol = 3)
 
 newmatrix <- cbind(thismatrix, c("strawberry", "blueberry", "raspberry"))
 
-# Print the new matrix
 newmatrix
 
-```
-
-Utilisez la `rbind()`fonction pour ajouter des lignes supplémentaires dans une matrice :
-
-### Exemple
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange","grape", "pineapple", "pear", "melon", "fig"), nrow = 3, ncol = 3)
 
 newmatrix <- rbind(thismatrix, c("strawberry", "blueberry", "raspberry"))
 
 # Print the new matrix
-newmatrix
 
-```
+newmatrix
 
 ## Supprimer des lignes et des colonnes
 
-Utilisez la `c()`fonction pour supprimer des lignes et des colonnes dans une matrice :
-
-### Exemple
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange", "mango", "pineapple"), nrow = 3, ncol =2)
 
 #Remove the first row and the first column
+
 thismatrix <- thismatrix[-c(1), -c(1)]
 
 thismatrix
 
-```
-
 ## Vérifier si un élément existe
 
-Pour savoir si un élément spécifié est présent dans une matrice, utilisez l' `%in%`opérateur :
-  
-  -   Exemple
-
-Vérifiez si "apple" est présent dans la matrice :
-  
-  ```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 "apple" %in% thismatrix
-```
 
 ## Nombre de lignes et de colonnes
 
-Utilisez la `dim()`fonction pour trouver le nombre de lignes et de colonnes dans une matrice :
-  
-  ### Exemple
-  
-  ```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 dim(thismatrix)
-```
 
-## Longueur de la matrice
-
-Utilisez la `length()`fonction pour trouver la dimension d'une matrice :
-
-### Exemple
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 length(thismatrix)
 
-```
 
 ## Boucler à travers une matrice
 
-Vous pouvez parcourir une matrice à l’aide d’une `for`boucle. La boucle commencera à la première ligne, en se déplaçant vers la droite :
-
-### Exemple
-
-Parcourez les éléments de la matrice et imprimez-les :
-
-```{r}
 thismatrix <- matrix(c("apple", "banana", "cherry", "orange"), nrow = 2, ncol = 2)
 
 for (rows in 1:nrow(thismatrix)) {
@@ -1257,55 +718,32 @@ for (rows in 1:nrow(thismatrix)) {
     print(thismatrix[rows, columns])
   }
 }
-```
 
 ## Combiner deux matrices
 
-Encore une fois, vous pouvez utiliser la fonction `rbind()`ou `cbind()`pour combiner deux ou plusieurs matrices :
-
-### Exemple
-
-```{r}
 # Combine matrices
 Matrix1 <- matrix(c("apple", "banana", "cherry", "grape"), nrow = 2, ncol = 2)
 Matrix2 <- matrix(c("orange", "mango", "pineapple", "watermelon"), nrow = 2, ncol = 2)
 
 # Adding it as a rows
+
 Matrix_Combined <- rbind(Matrix1, Matrix2)
 Matrix_Combined
 
 # Adding it as a columns
+
 Matrix_Combined <- cbind(Matrix1, Matrix2)
 Matrix_Combined
-```
 
-## Tableaux
 
-Par rapport aux matrices, les tableaux peuvent avoir plus de deux dimensions.
+## Tableaux ------
 
-On peut utiliser la `array()`fonction pour créer un tableau, et le `dim`paramètre pour spécifier les dimensions :
-
-### Exemple
-
-```{r}
-# An array with one dimension with values ranging from 1 to 24
 thisarray <- c(1:24)
 thisarray
 
-# An array with more than one dimension
 multiarray <- array(thisarray, dim = c(4, 3, 2))
 multiarray
-```
 
-#### Exemple expliqué
-
-Dans l'exemple ci-dessus, nous créons un tableau avec les valeurs 1 à 24.
-
-Comment fonctionne ... `dim=c(4,3,2)`travail?\
-Le premier et le deuxième nombre entre parenthèses spécifient le nombre de lignes et de colonnes.\
-Le dernier chiffre entre parenthèses spécifie le nombre de dimensions souhaitées.
-
-**Remarque :** Les tableaux ne peuvent avoir qu'un seul type de données.
 
 ## Accéder aux éléments du tableau
 
